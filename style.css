@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    background: linear-gradient(#fbffc3, #d5d8ff);
+    background-attachment: fixed;
+}
+
+#pokemon_title{
+    height: auto;
+    max-width: 20%;
+    margin-bottom: 50px;
+}
+h1 {
+    margin-bottom: 10px;
+}
+input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 1px;
+    padding-right: 1px;
+    width: 40px;
+}
+.card {
+    align-content: center;
+    align-items: center;
+}
+
+
