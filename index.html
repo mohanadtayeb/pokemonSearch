@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>pokemon search</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <div id="image_title">
-<img id="pokemon_title" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png">
+<img id="pokemon_title" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon title">
 </div>
 <div class="d-flex-inline flex-column justify-content-center">
 <h2>to get a Pokemon information please write the id of the pokemon</h2>
-<input type="text" id="input_text" placeholder="10">
+<input type="text" id="input_text" placeholder="25">
 <button onclick="button_press()" type="button" class="btn btn-primary">search</button>
+<button ondblclick="clear_press()" type="button" class="btn btn-secondary">Clear</button>
+<p id="errors"></p>
 </div>
 
-
+    <div id="loading">loading ...</div>
     <div class="d-flex justify-content-center">
         <div class="card d-flex justify-content-center" style="width: 18rem; background: linear-gradient(#ff8989, #fff398)">
-            <img class="card-img-top" id="pokemon_image" alt="pokemon image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="Card image cap">
+            <img onmouseleave="imgHoverOut()" onmouseover="imgHover()" class="card-img-top" id="pokemon_image" alt="pokemon image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png">
             <div class="card-body">
                 <h5 >name: <span id="pokemon_name" ></span></h5>
                 <p class="card-text">ability: <span id="pokemon_ability"></span></p>
+                <p class="card-text">ability 2: <span id="pokemon_ability2"></span></p>
+                <p class="card-text">weight: <span id="pokemon_weight"></span></p>
+                <p class="card-text">base experience: <span id="pokemon_exp"></span></p>
             </div>
+
+            
+
     </div>
+
 </div>
 
 
 
 
-<script src="script.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>
